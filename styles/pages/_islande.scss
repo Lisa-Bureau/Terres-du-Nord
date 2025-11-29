@@ -109,11 +109,11 @@
 .day-2 {
     &-grid {
         display: grid;
-        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 50px 180px 150px 150px 150px;
         gap: 1rem;
         min-height: 100vh;
-        padding: 2rem;
+        padding: 2rem 2rem 2rem 11rem;
 
         & img {
             width: 100%;
@@ -124,13 +124,8 @@
     }
 }
 
-.day-2-menu {
-    grid-column: 1;
-    grid-row: 1 / 6;
-}
-
 .day-2-title {
-    grid-column: 2 / 6;
+    grid-column: 1 / 5;
     grid-row: 1;
     display: flex;
     align-items: center;
@@ -140,49 +135,49 @@
 
 .day-2-img {
     &-1 {
-        grid-column: 2 / 6;
+        grid-column: 1 / 5;
         grid-row: 2;
     }
 
     &-2 {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 3;
     }
 
     &-3 {
-        grid-column: 6;
+        grid-column: 5;
         grid-row: 3 / 5;
     }
 
     &-4 {
-        grid-column: 3;
+        grid-column: 2;
         grid-row: 4 / 5;
     }
 
     &-5 {
-        grid-column: 4 / 6;
+        grid-column: 3 / 5;
         grid-row: 4;
     }
 
     &-6 {
-        grid-column: 3 / 5;
+        grid-column: 2 / 4;
         grid-row: 5;
     }
 
     &-7 {
-        grid-column: 5 / 7;
+        grid-column: 4 / 6;
         grid-row: 5;
     }
 }
 
 .day-2-map {
-    grid-column: 6;
+    grid-column: 5;
     grid-row: 2;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .day-2-text {
-    grid-column: 3 / 6;
+    grid-column: 2 / 5;
     grid-row: 3;
     color: $c-red;
     display: flex;
@@ -191,10 +186,202 @@
 
 .day-2-video {
     &-1 {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 4 / 6;
         background-color: black;
         display: flex;
         justify-content: center;
     }
+}
+
+/* Section 3ème jour */
+
+.day-3 {
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px 180px 290px 180px;
+        gap: 1rem;
+        min-height: 100vh;
+        padding: 2rem 2rem 2rem 11rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+}
+
+.day-3-title {
+    grid-column: 1 / 5;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    color: $c-red;
+}
+
+.day-3-img {
+    &-1 {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    &-2 {
+        grid-column: 3 / 5;
+        grid-row: 2;
+    }
+
+    &-3 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    &-4 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    &-5 {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    &-6 {
+        grid-column: 1 / 3;
+        grid-row: 4;
+    }
+
+    &-7 {
+        grid-column: 3 / 4;
+        grid-row: 4;
+    }
+}
+
+.day-3-map {
+    grid-column: 4;
+    grid-row: 4;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.day-3-text {
+    grid-column: 4;
+    grid-row: 3;
+    color: $c-red;
+    display: flex;
+    align-items: center;
+}
+
+/* Section 4ème jour */
+
+.day-4 {
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr 0.5fr 1fr 2fr;
+        grid-template-rows: 50px 210px 210px 230px;
+        gap: 1rem;
+        min-height: 100vh;
+        padding: 2rem 2rem 2rem 11rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+}
+
+.day-4-title {
+    grid-column: 1 / 6;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    color: $c-red;
+}
+
+.day-4-img {
+    &-1 {
+        grid-column: 1;
+        grid-row: 2 / 4;
+    }
+
+    &-2 {
+        grid-column: 2 / 4;
+        grid-row: 2 / 4;
+    }
+
+    &-3 {
+        grid-column: 4 /5;
+        grid-row: 2 / 4;
+    }
+
+    &-4 {
+        grid-column: 5;
+        grid-row: 2;
+    }
+
+    &-5 {
+        grid-column: 5;
+        grid-row: 3;
+    }
+
+    &-6 {
+        grid-column: 1 / 3;
+        grid-row: 4;
+    }
+}
+
+.day-4-map {
+    grid-column: 3 / 5;
+    grid-row: 4;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.day-4-text {
+    grid-column: 5;
+    grid-row: 4;
+    color: $c-red;
+    display: flex;
+    align-items: center;
+}
+
+/* Modal */
+
+::backdrop {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    margin: auto;
+}
+
+#modal-img {
+    height: 100%;
+    margin: auto;
+}
+
+#modal-video {
+    width: 100%;
+    height: 100%;
+}
+
+.close {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
 }
