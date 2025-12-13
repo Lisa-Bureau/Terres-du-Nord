@@ -1,36 +1,47 @@
 /* Design system */
 
 /* Colors */
-$c-blue: #353aa9;
-$c-white: #FFF;
-$c-red: #9e222c;
+$c-midnight-blue: #0A2E50;
+$c-sky-blue: #B0D7E0;
+$c-amber: #C9882B;
+$c-snow-cream: #F7F7F7;
+$c-rock-gray: #303d50;
 
 
 /* Text */
-@mixin header-font {
-    font: 500 3rem 'Permanent Marker';
+@mixin title {
+    font: 5rem 'Cormorant Garamond';
 }
 
-@mixin subtitle-font {
-    font: 1rem Handlee;
+@mixin subtitle {
+    font: 2rem 'Cormorant Garamond';
 }
 
-@mixin body-font {
-    font: 1.2rem Handlee;
+@mixin body-font{
+    font: 1rem 'Inter';
 }
 
 
+.home h1 {
+    @include title()
+}
 
+.home h2 {
+    @include subtitle();
+    color: $c-rock-gray;
+}
 
-body {
-    @include body-font()
+.islande-trip h1 {
+    @include title();
+    font-size: 3rem;
+}
+
+p {
+    @include body-font();
+    color: $c-rock-gray;
 }
 
 a div, span {
-    @include subtitle-font()
+    @include body-font()
 }
 
-h1,
-a {
-    @include header-font()
-}

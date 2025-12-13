@@ -1,57 +1,144 @@
 .home {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     height: 100vh;
+    background: linear-gradient($c-midnight-blue, $c-sky-blue, $c-snow-cream);
 }
 
-.norvege {
-    background-image: url(../../img/norvege.jpg);
-    background-size: cover;
-    border-right: 10px solid black;
+.home-container {
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home-title {
+    width: 50%;
+    text-align: center;
+    padding: 2rem 0 0 2rem;
+
+    & > p:first-of-type {
+        letter-spacing: 10px;
+        color: $c-sky-blue;
+    }
 
     & h1 {
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
-        color: white;
+        color: $c-amber;
+    }
+
+    & > p:nth-of-type(2) { 
+        color: $c-sky-blue;
     }
 }
 
-.suede {
-    background-image: url(../../img/suede.JPG);
-    background-size: cover;
-    background-position: center;
-    border-right: 10px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.map-wrapper {
+    width: 100%; 
+    height: 100%; 
+    align-self: center;
+    overflow: hidden; 
+    position: relative;
+}
 
-    & h1 {
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
-        color: white;
+.map-image {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+$pin-islande-top: 23.5%;   
+$pin-islande-left: 44.5%; 
+
+.pin {
+    position: absolute;
+    top: $pin-islande-top; 
+    left: $pin-islande-left;
+    z-index: 10;
+    width: 2vw;          
+    height: 2vw;
+    border: 0.15vw solid $c-amber;
+    border-radius: 1vw;
+    animation: flashing 1.5s infinite steps(1);
+    transform: translate(-50%, -50%); 
+}
+
+.pin-center {
+    position: absolute;
+    top: $pin-islande-top;
+    left: $pin-islande-left; 
+    z-index: 11;
+    width: 1.2vw;
+    height: 1.2vw;
+    border: 0.4vw solid $c-amber;
+    border-radius: 0.6vw;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+
+    & > figure {
+        display: none;
     }
 }
 
-.islande {
-    background-image: url(../../img/islande.jpg);
-    background-size: cover;
-    background-position: center;
-    border-right: 10px solid black;
+.pin-center:hover > figure {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    width: 30rem;
 
-    & a {
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
-        color: white;
-        text-decoration: none;
 
-        &:hover {
-            transform: rotate(180deg) scale(1.5);
+    & > img {
+        width: 30rem;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    & > figcaption {
+        background-color: $c-rock-gray;
+        border-radius: 0 0 10px 10px;
+        color: $c-snow-cream;
+        @include body-font;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+
+        & > .pin-icon {
+            width: 2rem;
+            height: auto;
+            stroke: $c-snow-cream;
+            fill: $c-rock-gray;
         }
+
+        & > .calendar-icon {
+            width: 1.3rem;
+            height: auto;
+            fill: $c-snow-cream;
+            stroke: $c-rock-gray;
+            margin-left: 1rem;
+            margin-right: 0.5rem;
+        }
+
+        & > .clock-icon {
+            width: 1.3rem;
+            height: auto;
+            stroke: $c-snow-cream;
+            fill: $c-rock-gray;
+            margin-left: 1rem;
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+.home-subtitle {
+    width: 30%;
+    text-align: center;
+    padding: 0 1rem 2rem 0;
+    align-self: flex-end;
+}
+
+@keyframes flashing {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
