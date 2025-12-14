@@ -484,8 +484,22 @@ span {
 .day-2-text {
   grid-column: 2/5;
   grid-row: 3;
-  display: flex;
-  align-items: center;
+  overflow-y: scroll;
+  padding-right: 5px;
+}
+
+.day-2-text::-webkit-scrollbar {
+  width: 5px; /* Largeur de la barre verticale */
+}
+
+.day-2-text::-webkit-scrollbar-thumb {
+  background-color: #303d50; /* Couleur du "pouce" (la partie que l'on manipule) */
+  border-radius: 5px;
+}
+
+.day-2-text::-webkit-scrollbar-track {
+  background-color: #B0D7E0; /* Couleur de la piste */
+  border-radius: 5px;
 }
 
 .day-2-video-1 {
@@ -562,8 +576,22 @@ span {
 .day-3-text {
   grid-column: 4;
   grid-row: 3;
-  display: flex;
-  align-items: center;
+  overflow-y: scroll;
+  padding-right: 5px;
+}
+
+.day-3-text::-webkit-scrollbar {
+  width: 5px; /* Largeur de la barre verticale */
+}
+
+.day-3-text::-webkit-scrollbar-thumb {
+  background-color: #303d50; /* Couleur du "pouce" (la partie que l'on manipule) */
+  border-radius: 5px;
+}
+
+.day-3-text::-webkit-scrollbar-track {
+  background-color: #B0D7E0; /* Couleur de la piste */
+  border-radius: 5px;
 }
 
 /* Section 4ème jour */
@@ -628,8 +656,22 @@ span {
 .day-4-text {
   grid-column: 5;
   grid-row: 4;
-  display: flex;
-  align-items: center;
+  overflow-y: scroll;
+  padding-right: 5px;
+}
+
+.day-4-text::-webkit-scrollbar {
+  width: 5px; /* Largeur de la barre verticale */
+}
+
+.day-4-text::-webkit-scrollbar-thumb {
+  background-color: #303d50; /* Couleur du "pouce" (la partie que l'on manipule) */
+  border-radius: 5px;
+}
+
+.day-4-text::-webkit-scrollbar-track {
+  background-color: #B0D7E0; /* Couleur de la piste */
+  border-radius: 5px;
 }
 
 /* Modal */
@@ -657,7 +699,7 @@ span {
 }
 
 .close {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   top: 0px;
   right: -60px;
