@@ -15,7 +15,7 @@
 }
 @media screen and (max-width: 768px) {
   .home h1 {
-    font: 1.5rem "Cormorant Garamond";
+    font: 1.4rem "Cormorant Garamond";
   }
 }
 
@@ -35,7 +35,7 @@
 }
 @media screen and (max-width: 768px) {
   .islande-trip h1 {
-    font: 1.5rem "Cormorant Garamond";
+    font: 1.4rem "Cormorant Garamond";
   }
 }
 
@@ -205,6 +205,9 @@ a div, span {
     display: none;
   }
 }
+.pin-center:hover > figure > a {
+  text-decoration: none;
+}
 .pin-center:hover > figure > img {
   width: 30rem;
   height: auto;
@@ -219,7 +222,6 @@ a div, span {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
 }
 @media screen and (max-width: 768px) {
   .pin-center:hover > figure > figcaption {
@@ -290,6 +292,9 @@ a div, span {
   .trips-mobile {
     display: block;
   }
+  .trips-mobile > a {
+    text-decoration: none;
+  }
   .trips-mobile > a > figure {
     display: flex;
     flex-direction: column;
@@ -338,6 +343,9 @@ a div, span {
 @media screen and (max-width: 1025px) and (min-width: 769px) {
   .trips-mobile {
     display: block;
+  }
+  .trips-mobile > a {
+    text-decoration: none;
   }
   .trips-mobile > a > figure {
     display: flex;

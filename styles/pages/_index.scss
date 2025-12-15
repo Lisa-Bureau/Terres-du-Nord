@@ -154,6 +154,10 @@ $pin-islande-left: 44.5%;
        display: none;
     }
 
+    & > a {
+        text-decoration: none;
+    }
+
     & > img {
         width: 30rem;
         height: auto;
@@ -169,7 +173,6 @@ $pin-islande-left: 44.5%;
         display: flex;
         align-items: center;
         justify-content: center;
-        text-decoration: none;
 
         & > .pin-icon {
             width: 2rem;
@@ -238,6 +241,10 @@ $pin-islande-left: 44.5%;
     @media screen and (max-width: 768px) {
         display: block;
 
+        & > a {
+            text-decoration: none;
+        }
+
         & > a > figure {
             display: flex;
             flex-direction: column;
@@ -291,6 +298,10 @@ $pin-islande-left: 44.5%;
 
     @media screen and (max-width: 1025px) and (min-width: 769px) {
         display: block;
+
+        & > a {
+            text-decoration: none;
+        }
 
         & > a > figure {
             display: flex;
