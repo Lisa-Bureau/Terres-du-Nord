@@ -508,11 +508,6 @@ a div, span {
 .cercle-border:hover {
   opacity: 1;
 }
-@media screen and (max-width: 1025px) {
-  .cercle-border:hover {
-    opacity: 0;
-  }
-}
 
 .active {
   width: 30px;

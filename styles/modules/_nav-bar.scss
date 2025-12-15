@@ -86,10 +86,6 @@
 
         &:hover {
             opacity: 1;
-
-            @media screen and (max-width: 1025px) {
-                opacity: 0;
-            }
         }
     }
 }
