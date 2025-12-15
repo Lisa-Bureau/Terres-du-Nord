@@ -22,6 +22,10 @@
 
 .lien-conteneur-photo:hover .photo-hover {
     display: flex;
+
+    @media screen and (max-width: 1025px) {
+        display: none;
+    }
 }
 
 .img {

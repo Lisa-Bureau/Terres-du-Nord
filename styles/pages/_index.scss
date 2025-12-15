@@ -169,6 +169,7 @@ $pin-islande-left: 44.5%;
         display: flex;
         align-items: center;
         justify-content: center;
+        text-decoration: none;
 
         & > .pin-icon {
             width: 2rem;
@@ -258,6 +259,7 @@ $pin-islande-left: 44.5%;
                 justify-content: center;
                 font-family: 'Inter';
                 font-size: 0.5rem;
+                text-decoration: none;
 
                 & > .pin-icon {
                     width: 1.5rem;

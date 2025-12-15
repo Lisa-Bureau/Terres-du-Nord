@@ -219,6 +219,7 @@ a div, span {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 @media screen and (max-width: 768px) {
   .pin-center:hover > figure > figcaption {
@@ -309,6 +310,7 @@ a div, span {
     justify-content: center;
     font-family: "Inter";
     font-size: 0.5rem;
+    text-decoration: none;
   }
   .trips-mobile > a > figure > figcaption > .pin-icon {
     width: 1.5rem;
@@ -506,6 +508,11 @@ a div, span {
 .cercle-border:hover {
   opacity: 1;
 }
+@media screen and (max-width: 1025px) {
+  .cercle-border:hover {
+    opacity: 0;
+  }
+}
 
 .active {
   width: 30px;
@@ -558,6 +565,11 @@ span {
 
 .lien-conteneur-photo:hover .photo-hover {
   display: flex;
+}
+@media screen and (max-width: 1025px) {
+  .lien-conteneur-photo:hover .photo-hover {
+    display: none;
+  }
 }
 
 .img {
@@ -721,7 +733,7 @@ span {
 }
 @media screen and (max-width: 768px) {
   .day-1-map {
-    grid-column: 1/3;
+    grid-column: 1/2;
     grid-row: 3;
   }
 }
@@ -735,7 +747,7 @@ span {
 }
 @media screen and (max-width: 768px) {
   .day-1-text {
-    grid-column: 3/5;
+    grid-column: 2/5;
     grid-row: 3;
   }
 }
