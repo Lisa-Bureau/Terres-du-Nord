@@ -1,27 +1,59 @@
 .home {
     height: 100vh;
     background: linear-gradient($c-midnight-blue, $c-sky-blue, $c-snow-cream);
+
+    @media screen and (max-width: 1025px) and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .home-container {
-    height: 100vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    @media screen and (max-width: 1025px) and (min-width: 768px) {
+        height: 90vh;
+        align-items: center;
+    }
 }
 
 .home-title {
-    width: 50%;
+    width: 60%;
+    align-self: flex-start;
     text-align: center;
-    padding: 2rem 0 0 2rem;
+    padding: 5rem 0 0 3rem;
+
+    @media screen and (max-width: 768px) {
+        padding: 3rem 1rem 1rem 1rem;
+        width: 100%;
+    }
 
     & > p:first-of-type {
         letter-spacing: 10px;
         color: $c-sky-blue;
+
+        @media screen and (max-width: 768px) {
+            padding-bottom: 10px;
+            letter-spacing: 5px;
+        }
     }
 
     & h1 {
         color: $c-amber;
+
+        @media screen and (max-width: 768px) {
+            padding-bottom: 10px;
+            font-size: 3rem;
+        }
     }
 
     & > p:nth-of-type(2) { 
@@ -30,8 +62,7 @@
 }
 
 .map-wrapper {
-    width: 100%; 
-    height: 100%; 
+    width: 98%; 
     align-self: center;
     overflow: hidden; 
     position: relative;
@@ -76,11 +107,52 @@ $pin-islande-left: 44.5%;
     }
 }
 
+@media screen and (max-width: 1025px) and (min-width: 768px) {
+    $pin-islande-top-mobile: 25%;
+    $pin-islande-left-mobile: 40%; 
+    
+    .pin, .pin-center {
+        top: $pin-islande-top-mobile;
+        left: $pin-islande-left-mobile;
+        width: 3vw;          
+        height: 3vw;
+        border-radius: 1.5vw;
+    }
+    
+    .pin-center {
+        width: 1.8vw;
+        height: 1.8vw;
+        border: 0.6vw solid $c-amber;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    $pin-islande-top-mobile: 25%;
+    $pin-islande-left-mobile: 40%; 
+    
+    .pin, .pin-center {
+        top: $pin-islande-top-mobile;
+        left: $pin-islande-left-mobile;
+        width: 4vw;          
+        height: 4vw;
+        border-radius: 2vw;
+    }
+    
+    .pin-center {
+        width: 2vw;
+        height: 2vw;
+        border: 0.7vw solid $c-amber;
+    }
+}
+
 .pin-center:hover > figure {
     display: flex;
     flex-direction: column;
     width: 30rem;
 
+    @media screen and (max-width: 1025px) {
+       display: none;
+    }
 
     & > img {
         width: 30rem;
@@ -96,6 +168,7 @@ $pin-islande-left: 44.5%;
         padding: 5px;
         display: flex;
         align-items: center;
+        justify-content: center;
 
         & > .pin-icon {
             width: 2rem;
@@ -129,6 +202,21 @@ $pin-islande-left: 44.5%;
     text-align: center;
     padding: 0 1rem 2rem 0;
     align-self: flex-end;
+    
+    & > h2 {
+        padding-bottom: 0.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        align-self: center;
+        width: 100%;
+        padding: 0 0 1rem 0;
+    }
+
+    @media screen and (max-width: 1025px) and (min-width: 769px) {
+        padding: 0 0 2rem 0;
+        align-self: center;
+    }
 }
 
 @keyframes flashing {
@@ -142,3 +230,113 @@ $pin-islande-left: 44.5%;
         opacity: 0;
     }
 }
+
+.trips-mobile {
+    display: none;
+    
+    @media screen and (max-width: 768px) {
+        display: block;
+
+        & > a > figure {
+            display: flex;
+            flex-direction: column;
+            width: 14rem;
+
+            & > img {
+                width: 14rem;
+                height: auto;
+                border-radius: 10px 10px 0 0;
+            }
+
+            & > figcaption {
+                background-color: $c-rock-gray;
+                border-radius: 0 0 10px 10px;
+                color: $c-snow-cream;
+                padding: 1px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Inter';
+                font-size: 0.5rem;
+
+                & > .pin-icon {
+                    width: 1.5rem;
+                    height: auto;
+                    stroke: $c-snow-cream;
+                    fill: $c-rock-gray;
+                }
+
+                & > .calendar-icon {
+                    width: 1.2rem;
+                    height: auto;
+                    fill: $c-snow-cream;
+                    stroke: $c-rock-gray;
+                    margin-left: 1rem;
+                    margin-right: 0.5rem;
+                }
+
+                & > .clock-icon {
+                    width: 1.2rem;
+                    height: auto;
+                    stroke: $c-snow-cream;
+                    fill: $c-rock-gray;
+                    margin-left: 1rem;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1025px) and (min-width: 769px) {
+        display: block;
+
+        & > a > figure {
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+
+            & > img {
+                border-radius: 10px 10px 0 0;
+            }
+
+            & > figcaption {
+                background-color: $c-rock-gray;
+                border-radius: 0 0 10px 10px;
+                color: $c-snow-cream;
+                padding: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.8rem;
+                font-family: 'Inter';
+
+                & > .pin-icon {
+                    width: 2rem;
+                    height: auto;
+                    stroke: $c-snow-cream;
+                    fill: $c-rock-gray;
+                }
+
+                & > .calendar-icon {
+                    width: 1.3rem;
+                    height: auto;
+                    fill: $c-snow-cream;
+                    stroke: $c-rock-gray;
+                    margin-left: 1rem;
+                    margin-right: 0.5rem;
+                }
+
+                & > .clock-icon {
+                    width: 1.3rem;
+                    height: auto;
+                    stroke: $c-snow-cream;
+                    fill: $c-rock-gray;
+                    margin-left: 1rem;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+

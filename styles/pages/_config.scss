@@ -11,14 +11,26 @@ $c-rock-gray: #303d50;
 /* Text */
 @mixin title {
     font: 5rem 'Cormorant Garamond';
+
+    @media screen and (max-width: 768px) {
+        font: 1.5rem 'Cormorant Garamond';
+    }
 }
 
 @mixin subtitle {
-    font: 2rem 'Cormorant Garamond';
+    font: 2rem/1.8rem 'Cormorant Garamond';
+
+    @media screen and (max-width: 768px) {
+        font: 1.5rem 'Cormorant Garamond';
+    }
 }
 
 @mixin body-font{
     font: 1rem 'Inter';
+
+    @media screen and (max-width: 768px) {
+        font: 0.7rem 'Inter';
+    }
 }
 
 
