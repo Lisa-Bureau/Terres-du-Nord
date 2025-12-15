@@ -50,9 +50,10 @@
     @media screen and (max-width: 1025px) {
         flex-direction: row;
         width: 100%;
-        height: 100px;
+        height: 70px;
         left: 0;
         top: -7px;
+        background-color: $c-snow-cream;
     }
 
     &-item {
