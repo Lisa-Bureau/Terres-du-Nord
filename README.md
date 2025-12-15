@@ -18,7 +18,6 @@ Pour le moment, retrouvez le récit de mon voyage en Islande. Suivront ceux à O
   - HTML5 : pour structurer les pages web.
   - Sass (Syntactically Awesome Style Sheets) : Un préprocesseur CSS. Il permet d'utiliser des fonctionnalités avancées comme les variables, les mixins et l'imbrication (nesting) pour une gestion plus modulaire et efficace des styles.
   Le fichier final est compilé en CSS3 (dans `styles/main.css`).
-  - CSS3 : Pour le style final et la mise en page (résultat de la compilation Sass dans `styles/main.css`).
   - JavaScript : pour les éléments interactifs et le contenu dynamique :
     - `script/navbar.js` : gère l'état actif des boutons de navigation.
     - `script/modal.js` : implémente la fenêtre modale pour l'affichage des images et des vidéos.
