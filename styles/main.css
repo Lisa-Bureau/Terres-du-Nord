@@ -13,20 +13,17 @@
 .home h1 {
   font: 5rem "Cormorant Garamond";
 }
-@media screen and (max-width: 768px) {
-  .home h1 {
-    font: 1.4rem "Cormorant Garamond";
-  }
-}
 
 .home h2 {
   font: 2rem/1.8rem "Cormorant Garamond";
-  color: #303d50;
 }
 @media screen and (max-width: 768px) {
   .home h2 {
     font: 1.5rem "Cormorant Garamond";
   }
+}
+.home h2 {
+  color: #303d50;
 }
 
 .islande-trip h1 {
@@ -41,12 +38,14 @@
 
 p {
   font: 1rem "Inter";
-  color: #303d50;
 }
 @media screen and (max-width: 768px) {
   p {
     font: 0.7rem "Inter";
   }
+}
+p {
+  color: #303d50;
 }
 
 a div, span {
@@ -218,15 +217,17 @@ a div, span {
   border-radius: 0 0 10px 10px;
   color: #F7F7F7;
   font: 1rem "Inter";
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   .pin-center:hover > figure > figcaption {
     font: 0.7rem "Inter";
   }
+}
+.pin-center:hover > figure > figcaption {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .pin-center:hover > figure > figcaption > .pin-icon {
   width: 2rem;
@@ -590,13 +591,23 @@ span {
   animation: scale 0.5s 0.5s cubic-bezier(0.5, 0, 0.5, 1) both, appear 0.5s 0.5s linear both;
 }
 
+.pages-trip {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
 @media screen and (max-width: 1025px) {
   .pages-trip {
     display: flex;
-    height: 100vh;
-    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
   }
 }
+
+.pages-trip section {
+  scroll-snap-align: start;
+}
+
 /* Section 1er jour */
 .day-1 {
   transform-origin: 50% 0%;
@@ -1245,8 +1256,7 @@ span {
 
 /* Modal */
 ::backdrop {
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.75);
 }
 
@@ -1259,8 +1269,8 @@ span {
 }
 
 #modal-img {
-  height: auto;
-  width: 100%;
+  height: 100%;
+  width: auto;
   position: absolute;
   top: 50%;
   left: 50%;
